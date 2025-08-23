@@ -34,7 +34,7 @@ pip install yt-dlp
 ```bash
 # Option 1: Clone repository (if available)
 https://github.com/monis-codes/Reel-Download-Script.git
-cd Reel-Download-Script
+cd Content-Download-Script
 
 
 ### Step 3: Make Script Executable (Optional)
