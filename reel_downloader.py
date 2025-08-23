@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Instagram Reel Downloader
-A script to download Instagram reels (MP4 video + description) using yt-dlp
+Reel Downloader
+A script to download reels (MP4 video + description) using yt-dlp
 
 Required dependencies:
 pip install yt-dlp
 
 Author: Assistant
-Purpose: Help download Instagram reels for reposting on other platforms
+Purpose: Help download reels for reposting on other platforms
 """
 
 import os
@@ -57,10 +57,10 @@ def extract_reel_info(url):
 
 def download_reel(url, output_dir="downloads"):
     """
-    Download Instagram reel video and save description
+    Download reel video and save description
     
     Args:
-        url (str): Instagram reel URL
+        url (str): reel URL
         output_dir (str): Directory to save files
     
     Returns:
@@ -112,7 +112,7 @@ def download_reel(url, output_dir="downloads"):
         print("💾 Saving description...")
         with open(description_filename, 'w', encoding='utf-8') as f:
             if description:
-                f.write(f"Instagram Reel Description:\n")
+                f.write(f"Reel Description:\n")
                 f.write(f"URL: {url}\n")
                 f.write(f"Title: {reel_info.get('title', 'N/A')}\n")
                 f.write(f"Uploader: {reel_info.get('uploader', 'N/A')}\n")
@@ -131,13 +131,13 @@ def download_reel(url, output_dir="downloads"):
 
 def validate_instagram_url(url):
     """
-    Validate if the provided URL is a valid Instagram reel URL
+    Validate if the provided URL is a valid reel URL
     
     Args:
         url (str): URL to validate
         
     Returns:
-        bool: True if valid Instagram reel URL, False otherwise
+        bool: True if valid reel URL, False otherwise
     """
     instagram_patterns = [
         r'https?://(www\.)?instagram\.com/reel/[A-Za-z0-9_-]+/?',
@@ -155,9 +155,9 @@ def main():
     """
     Main function to handle user input and coordinate the download process
     """
-    print("🎬 Instagram Reel Downloader")
+    print("🎬 Reel Downloader")
     print("=" * 40)
-    print("This tool will download Instagram reels as MP4 files along with their descriptions.")
+    print("This tool will download reels as MP4 files along with their descriptions.")
     print("Perfect for reposting content on other platforms like YouTube!")
     print()
     
@@ -170,8 +170,8 @@ def main():
         sys.exit(1)
     
     while True:
-        # Get Instagram reel URL from user
-        url = input("📎 Enter Instagram reel URL (or 'quit' to exit): ").strip()
+        # Get reel URL from user
+        url = input("📎 Enter reel URL (or 'quit' to exit): ").strip()
         
         if url.lower() in ['quit', 'exit', 'q']:
             print("👋 Goodbye!")
@@ -183,7 +183,7 @@ def main():
         
         # Validate URL format
         if not validate_instagram_url(url):
-            print("❌ Invalid Instagram URL format.")
+            print("❌ Invalid URL format.")
             print("Please use a URL like: https://www.instagram.com/reel/ABC123/")
             continue
         
@@ -207,7 +207,7 @@ def main():
         # Ask if user wants to download another reel
         another = input("📥 Download another reel? (y/n): ").strip().lower()
         if another not in ['y', 'yes']:
-            print("👋 Thanks for using Instagram Reel Downloader!")
+            print("👋 Thanks for using Reel Downloader!")
             break
 
 if __name__ == "__main__":

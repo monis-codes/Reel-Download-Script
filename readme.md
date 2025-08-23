@@ -1,6 +1,6 @@
-# 📱 Instagram Reel Downloader
+# 📱 Reel Downloader
 
-A powerful Python script to download Instagram reels as MP4 videos along with their descriptions/captions. Perfect for content creators who want to repost their Instagram content on other platforms like YouTube, TikTok, or for personal backup purposes.
+A powerful Python script to download reels as MP4 videos along with their descriptions/captions. Perfect for content creators who want to repost their content on other platforms like YouTube, TikTok, or for personal backup purposes.
 
 ## ✨ Features
 
@@ -10,11 +10,11 @@ A powerful Python script to download Instagram reels as MP4 videos along with th
 - 📁 **Organized Output** - Creates clean, filesystem-safe filenames
 - 🔄 **Batch Processing** - Process multiple reels in one session
 - 📊 **Metadata Preservation** - Saves uploader info, duration, view count, and more
-- 🚀 **Fast & Reliable** - Uses yt-dlp for stable Instagram downloads
+- 🚀 **Fast & Reliable** - Uses yt-dlp for stable downloads
 
 ## 🎯 Use Cases
 
-- **Content Creators**: Repost your Instagram reels on YouTube/TikTok
+- **Content Creators**: Repost your reels on YouTube/TikTok
 - **Social Media Managers**: Backup client content across platforms
 - **Personal Archiving**: Save your favorite reels for offline viewing
 - **Content Research**: Download reels for analysis and inspiration
@@ -39,31 +39,31 @@ cd Reel-Download-Script
 
 ### Step 3: Make Script Executable (Optional)
 ```bash
-chmod +x instagram_downloader.py
+chmod +x reel_downloader.py
 ```
 
 ## 🎮 Usage
 
 ### Basic Usage
 ```bash
-python instagram_downloader.py
+python reel_downloader.py
 ```
 
 ### Interactive Mode
 1. **Run the script**
-2. **Enter Instagram reel URL** when prompted
+2. **Enter reel URL** when prompted
 3. **Choose output directory** (or press Enter for default 'downloads' folder)
 4. **Wait for download** to complete
 5. **Repeat** for more reels or type 'quit' to exit
 
 ### Example Session
 ```
-🎬 Instagram Reel Downloader
+🎬 Reel Downloader
 ========================================
-This tool will download Instagram reels as MP4 files along with their descriptions.
+This tool will download reels as MP4 files along with their descriptions.
 Perfect for reposting content on other platforms like YouTube!
 
-📎 Enter Instagram reel URL (or 'quit' to exit): https://www.instagram.com/reel/ABC123xyz/
+📎 Enter reel URL (or 'quit' to exit): https://www.instagram.com/reel/ABC123xyz/
 
 🎯 Processing: https://www.instagram.com/reel/ABC123xyz/
 📁 Enter output directory (press Enter for 'downloads'): 
@@ -79,7 +79,7 @@ Perfect for reposting content on other platforms like YouTube!
 ==================================================
 
 📥 Download another reel? (y/n): n
-👋 Thanks for using Instagram Reel Downloader!
+👋 Thanks for using Reel Downloader!
 ```
 
 ## 📁 Output Files
@@ -94,7 +94,7 @@ For each downloaded reel, you'll get:
 ### Description File
 - **Format**: Plain text (.txt)
 - **Content**: Complete metadata including:
-  - Original Instagram URL
+  - Original URL
   - Reel title
   - Uploader username
   - Duration
@@ -113,7 +113,7 @@ downloads/
 
 ## 🔗 Supported URL Formats
 
-The script supports various Instagram URL formats:
+The script supports various URL formats:
 
 - `https://www.instagram.com/reel/ABC123/`
 - `https://instagram.com/reel/ABC123/`
@@ -141,7 +141,7 @@ The script automatically:
 You can import and use the functions in your own Python scripts:
 
 ```python
-from instagram_downloader import download_reel, validate_instagram_url
+from reel_downloader import download_reel, validate_instagram_url
 
 # Download a single reel
 url = "https://www.instagram.com/reel/ABC123/"
@@ -149,7 +149,7 @@ success = download_reel(url, output_dir="my_downloads")
 
 # Validate URL before downloading
 if validate_instagram_url(url):
-    print("Valid Instagram URL")
+    print("Valid URL")
 ```
 
 ### Batch Processing
@@ -178,7 +178,7 @@ pip install yt-dlp
 pip3 install yt-dlp
 ```
 
-#### 2. "Invalid Instagram URL" Error
+#### 2. "Invalid URL" Error
 - Ensure URL starts with `https://`
 - Check that URL contains `/reel/` or `/p/`
 - Verify the reel/post ID is present
@@ -196,7 +196,7 @@ pip3 install yt-dlp
 |-------|-------|----------|
 | `Error extracting reel info` | Invalid/private reel | Check URL, ensure reel is public |
 | `Error downloading reel` | Network/permission issue | Check connection and folder permissions |
-| `Invalid Instagram URL format` | Malformed URL | Use correct Instagram URL format |
+| `Invalid URL format` | Malformed URL | Use correct URL format |
 
 ## 📋 Requirements
 
